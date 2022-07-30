@@ -23,8 +23,6 @@ function App() {
  
 console.log(coords)
 
-
-
   return (
     <div className="App">
     <Card__Weather coords={coords}/>
