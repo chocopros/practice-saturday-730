@@ -4,7 +4,6 @@ import Card__Weather from './components/Card__Weather'
 
 function App() {
 
-
  const [coords, setCoords] = useState()
 
  useEffect(()=>{
