@@ -33,11 +33,7 @@ function App() {
 
 
   return (
-<<<<<<< HEAD
-    <div  className="App" > 
-=======
     <div  className="App" style={{ backgroundImage: `url(/src/${bg[0].snow})` }}> 
->>>>>>> ee1e26fb35190158de24c8f4463e5171c231ac51
       <Card__Weather coords={coords}/>
   
     </div>
