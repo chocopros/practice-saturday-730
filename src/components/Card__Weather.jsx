@@ -19,8 +19,8 @@ const Card__Weather = ({coords}) => {
                 .then(res => {
                   setWeather(res.data)
                   const temp = {
-                    celsius: `${(res.data.main.temp - 273.15)} °C`,
-                    farenheit:`${Math.floor((res.data.main.temp - 273.15) * 9 / 5 + 32)} °F`
+                    celsius: `${(res.data.main.temp - 273.15).toFixed(3)} °C`,
+                    farenheit:`${((res.data.main.temp - 273.15) * 9 / 5 + 32).toFixed(3)} °F`
                   }
                   setTemperture(temp) 
                   
