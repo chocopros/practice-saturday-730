@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import Card__Weather from './components/Card__Weather'
-import Loader from './components/Loader'
+import background from './imgweather/niebla.jpg'
 
 function App() {
 
@@ -26,7 +26,11 @@ function App() {
 console.log(coords)
 
   return (
+<<<<<<< HEAD
     <div  className="App" style={{backgroundImage:`url("./imgweather/niebla.jpg")`}}> 
+=======
+    <div  className="App" style={{backgroundImage:`url(${background})`}}> 
+>>>>>>> 65d6e4b8f2ce2467af68b47a9fd2b8b9318da886
       <Card__Weather coords={coords}/>
       
     </div>
