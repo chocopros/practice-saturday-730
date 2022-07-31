@@ -37,7 +37,7 @@ const Card__Weather = ({coords}) => {
 
     }
     if(loading){
-      <Loader/>
+      return <Loader />
     }else{
       return (
         <div className="card">
