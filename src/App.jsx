@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import Card__Weather from './components/Card__Weather'
-import Loader from './components/Loader'
 import background from './imgweather/niebla.jpg'
 
 function App() {
