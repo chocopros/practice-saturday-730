@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import Card__Weather from './components/Card__Weather'
 import bg from './assets/weathercondition'
-import bgg from './imgweather/snow.jpg'
+
 
 function App() {
 
@@ -28,7 +28,7 @@ function App() {
   //console.log(coords)
   //console.log(coords)
   //console.log(bg[0].snow)
-  console.log(bgg)
+  
   
 
 
