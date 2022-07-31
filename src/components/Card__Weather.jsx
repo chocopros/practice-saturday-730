@@ -19,9 +19,8 @@ const Card__Weather = ({coords}) => {
                 .then(res => {
                   setWeather(res.data)
                   const temp = {
-                    celsius: `${(res.data.main.temp )- 273.15} °C`,
-          
-                    farenheit:`${(res.data.main.temp - 273.15) * 9 / 5 + 32} °F`
+                    celsius: `${(res.data.main.temp - 273.15)} °C`,
+                    farenheit:`${Math.floor((res.data.main.temp - 273.15) * 9 / 5 + 32)} °F`
                   }
                   setTemperture(temp) 
                   
@@ -30,6 +29,10 @@ const Card__Weather = ({coords}) => {
         }},[coords?.lon, coords?.lat])
 
     console.log(weather)
+    const handleClick = () =>{
+      setIsCelsius(!isCelsius)
+
+    }
   return (
     <div className="card">
       <div className="card__body">
@@ -42,12 +45,13 @@ const Card__Weather = ({coords}) => {
         <div className="card__info">
           <h2>Today</h2>
           <h1>{weather?.name}, {weather?.sys.country}</h1>
+          <h2>"{weather?.weather[0].description}"</h2>
           <ul>
             <li><span>Wind Speed: </span>{weather?.wind.speed} m/s</li>
             <li><span>Clouds: </span>{weather?.clouds.all}%</li>
             <li><span>Preasure: </span>{weather?.main.pressure} hPa</li>
           </ul>
-          <button className='card__btn'>Degrees°F/°C</button>
+          <button className='card__btn' onClick={handleClick}>{isCelsius ? 'Change to °F' : 'Change to °C'}</button>
         </div>
       </div>
     </div>
