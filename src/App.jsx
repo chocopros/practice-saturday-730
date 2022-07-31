@@ -23,7 +23,8 @@ function App() {
 
  },[])
  
-console.log(coords)
+  console.log(coords)
+  console.log(coords)
 
   return (
     <div  className="App" style={{backgroundImage:`url(${background})`}}> 
