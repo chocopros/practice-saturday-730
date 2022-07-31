@@ -17,8 +17,7 @@
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: center;
-   
+    align-items: center;  
 }
 
 .card{
@@ -36,7 +35,7 @@
   width:600px;
   height: 300px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .body__img{
