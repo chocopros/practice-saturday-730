@@ -24,6 +24,7 @@ function App() {
  },[])
  
   console.log(coords)
+  console.log(coords)
 
 
   return (
