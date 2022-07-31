@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import Card__Weather from './components/Card__Weather'
+import Loader from './components/Loader'
 
 function App() {
 
  const [coords, setCoords] = useState()
+
 
  useEffect(()=>{
 
@@ -25,8 +27,10 @@ console.log(coords)
 
   return (
     <div className="App">
-    <Card__Weather coords={coords}/>
+      <Card__Weather coords={coords}/>
+      
     </div>
+    
   )
 }
 

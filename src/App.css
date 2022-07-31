@@ -8,6 +8,9 @@
   --color--bg--:rgb(22, 21, 21, 0.5);
 }
 
+.load{
+  background-color: red;
+}
 
 .App{
     width: 100%;
