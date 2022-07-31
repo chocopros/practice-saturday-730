@@ -14,7 +14,8 @@ const Card__Weather = ({coords}) => {
             const APIkey= '33362d39e5912619c9553d5b0a209cab'            
             const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${coords?.lat}&lon=${coords?.lon}&appid=${APIkey}`
             axios.get(URL)
-                .then(res => setWeather(res.data))
+                .then(res => {setWeather(res.data)
+                console.log(res.data)})
                 .catch(err => console.log(err))
         }
 
