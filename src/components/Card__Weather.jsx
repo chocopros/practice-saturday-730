@@ -31,7 +31,7 @@ const Card__Weather = ({coords}) => {
                 .catch(err => console.log(err))
         }},[coords?.lon, coords?.lat])
 
-    console.log(weather)
+    //console.log(weather)
     const handleClick = () =>{
       setIsCelsius(!isCelsius)
 
