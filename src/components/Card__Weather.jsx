@@ -45,7 +45,7 @@ const Card__Weather = ({coords}) => {
         <div className="card__info">
           <h2>Today</h2>
           <h1>{weather?.name}, {weather?.sys.country}</h1>
-          <h2>"{weather?.weather[0].description}"</h2>
+          <h2>&#34;{weather?.weather[0].description}&#34;</h2>
           <ul>
             <li><span>Wind Speed: </span>{weather?.wind.speed} m/s</li>
             <li><span>Clouds: </span>{weather?.clouds.all}%</li>
