@@ -1,12 +1,12 @@
-const background = [
+const background = [ 
     {
-      brokenclouds: "../imgweather/niebla.jpg",
+      brokenclouds: "../imgweather/broken-clouds.jpg",
       fewclouds: "../imgweather/fewclouds.jpg",
       scatttereredcloud: "../imgweather/scatttereredcloud.jpg",
       showerrain: "../imgweather/shower-rain.jpg",
       snow: "../imgweather/snow.jpg"
 
-    }
-];
 
+    }
+]
 export default background
