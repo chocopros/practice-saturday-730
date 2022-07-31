@@ -9,7 +9,7 @@ const Card__Weather = ({coords}) => {
     //console.log(coords.lon)
     const [weather, setWeather] = useState()
     const [temperture, setTemperture] = useState()
-    const [isCelcius, setIsCelcius] = useState(true)
+    const [isCelsius, setIsCelsius] = useState(true)
 
     useEffect (() =>{
         if (coords?.lat){
@@ -19,10 +19,12 @@ const Card__Weather = ({coords}) => {
                 .then(res => {
                   setWeather(res.data)
                   const temp = {
-                    celcius: `${res.data.main.tem - 273.15} °C`,
-                    farenheit:`${(res.data.main.tem - 273.15) * 9 / 5 + 32} °F`
+                    celsius: `${(res.data.main.temp )- 273.15} °C`,
+          
+                    farenheit:`${(res.data.main.temp - 273.15) * 9 / 5 + 32} °F`
                   }
                   setTemperture(temp) 
+                  
                 })
                 .catch(err => console.log(err))
         }},[coords?.lon, coords?.lat])
@@ -35,7 +37,7 @@ const Card__Weather = ({coords}) => {
           <div className='card__img'>
             <img src={ weather &&  `http://openweathermap.org/img/wn/${weather?.weather[0].icon}@4x.png`} alt="" />
           </div>
-          <div className='card__grados'><h2>{isCelcius ? temperture?.celcius : temperture?.farenheit}</h2></div>
+          <div className='card__grados'><h2>{isCelsius ? temperture?.celsius : temperture?.farenheit}</h2></div>
         </div>
         <div className="card__info">
           <h2>Today</h2>
