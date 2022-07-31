@@ -24,6 +24,8 @@ function App() {
  },[])
  
   //console.log(coords)
+  //console.log(coords)
+  //console.log(coords)
   console.log(bg[0].brokenclouds)
   
 
