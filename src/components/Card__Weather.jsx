@@ -9,7 +9,7 @@ const Card__Weather = ({coords}) => {
     //console.log(coords.lon)
     const [weather, setWeather] = useState()
     const [temperture, setTemperture] = useState()
-    const [isCelcius, setIsCelcius] = useState(true)
+    const [isCelsius, setIsCelsius] = useState(true)
 
     useEffect (() =>{
         if (coords?.lat){
@@ -19,8 +19,8 @@ const Card__Weather = ({coords}) => {
                 .then(res => {
                   setWeather(res.data)
                   const temp = {
-                    celcius: `${res.data.main.tem - 273.15} °C`,
-                    farenheit:`${(res.data.main.tem - 273.15) * 9 / 5 + 32} °F`
+                    celsius: `${Math.floor(res.data.main.temp - 273.15)} °C`,
+                    farenheit:`${Math.floor((res.data.main.temp - 273.15) * 9 / 5 + 32)} °F`
                   }
                   setTemperture(temp) 
                 })
@@ -28,6 +28,10 @@ const Card__Weather = ({coords}) => {
         }},[coords?.lon, coords?.lat])
 
     console.log(weather)
+    const handleClick = () =>{
+      setIsCelsius(!isCelsius)
+
+    }
   return (
     <div className="card">
       <div className="card__body">
@@ -35,17 +39,18 @@ const Card__Weather = ({coords}) => {
           <div className='card__img'>
             <img src={ weather &&  `http://openweathermap.org/img/wn/${weather?.weather[0].icon}@4x.png`} alt="" />
           </div>
-          <div className='card__grados'><h2>{isCelcius ? temperture?.celcius : temperture?.farenheit}</h2></div>
+          <div className='card__grados'><h2>{isCelsius ? temperture?.celsius : temperture?.farenheit}</h2></div>
         </div>
         <div className="card__info">
           <h2>Today</h2>
           <h1>{weather?.name}, {weather?.sys.country}</h1>
+          <h2>"{weather?.weather[0].description}"</h2>
           <ul>
             <li><span>Wind Speed: </span>{weather?.wind.speed} m/s</li>
             <li><span>Clouds: </span>{weather?.clouds.all}%</li>
             <li><span>Preasure: </span>{weather?.main.pressure} hPa</li>
           </ul>
-          <button className='card__btn'>Degrees°F/°C</button>
+          <button className='card__btn' onClick={handleClick}>{isCelsius ? 'Change to °F' : 'Change to °C'}</button>
         </div>
       </div>
     </div>
