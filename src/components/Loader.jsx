@@ -4,7 +4,7 @@ const Loader = () => {
   return (
     <div className="card">
       <h2>LOADING...</h2>
-      <h3>Click allow location</h3>
+      <h3>Allow location</h3>
 
     </div>
   )
