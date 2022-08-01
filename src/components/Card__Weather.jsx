@@ -5,6 +5,7 @@ import Loader from './Loader'
 
 
 
+
 const Card__Weather = ({coords}) => {
     //console.log(coords.lat)
     //console.log(coords.lon)
@@ -12,6 +13,7 @@ const Card__Weather = ({coords}) => {
     const [temperture, setTemperture] = useState()
     const [isCelsius, setIsCelsius] = useState(true)
     const [loading, setLoading] = useState(true)
+    const [urlImg, setUrlImg] = useState()
 
     useEffect (() =>{
         if (coords?.lat){
@@ -26,20 +28,21 @@ const Card__Weather = ({coords}) => {
                   }
                   setTemperture(temp) 
                   setLoading(false)
-                  
+                  setUrlImg(res.data.weather[0].main)
                 })
                 .catch(err => console.log(err))
         }},[coords?.lon, coords?.lat])
 
-    //console.log(weather)
+
     const handleClick = () =>{
       setIsCelsius(!isCelsius)
 
     }
+   
     if(loading){
       return <Loader />
     }else{
-      return (
+      return ( 
         <div className="card">
           <div className="card__body">
             <div className="body__img">
@@ -61,6 +64,7 @@ const Card__Weather = ({coords}) => {
             </div>
           </div>
         </div>
+        
       )
     }
 }

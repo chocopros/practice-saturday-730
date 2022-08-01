@@ -23,21 +23,12 @@ function App() {
   navigator.geolocation.getCurrentPosition(success)
 
  },[])
- 
-  //console.log(coords)
-  //console.log(coords)
-  //console.log(coords)
-  //console.log(bg[0].snow)
-  
-  
 
 
   return (
-    <div  className="App" style={{ backgroundImage: `url(/src/${bg[0].snow})` }}> 
-      <Card__Weather coords={coords}/>
-  
+    <div  className="App" style={{backgroundImage: `url(/src/${bg[0].snow})`}}> 
+      <Card__Weather coords={coords} />
     </div>
-    
   )
 }
 
