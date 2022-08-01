@@ -2,8 +2,10 @@ import React from 'react'
 
 const Loader = () => {
   return (
-    <div>
-    <h1 className='load'>Loading</h1>
+    <div className="card">
+      <h2>LOADING...</h2>
+      <h3>Click allow location</h3>
+
     </div>
   )
 }
