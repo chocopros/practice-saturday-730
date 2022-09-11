@@ -108,6 +108,24 @@ h2, h1{
   color: white
 }
 
+/******* INPUT***********/
+
+form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+form input {
+  padding: 5px 10px;
+}
+
+/****** ESTADOS ***********/
+
+/************* MEDIAS ***************/
+
 @media (max-width: 700px) {
 
   .card{
@@ -193,6 +211,22 @@ h2, h1{
 
   .card__btn{
     font-size: 16px;
+  }
+
+  form {
+    
+    display: flex;
+    gap: none;
+    align-items: center;
+    
+  }
+
+  form h5 {
+  
+  }
+
+  form input {
+    width: 130px;
   }
 
   
