@@ -121,7 +121,7 @@ form {
 form input {
   padding: 5px 10px;
 }
-form h3 {
+form h4 {
   color: white;
 }
 
@@ -224,9 +224,6 @@ form h3 {
     
   }
 
-  form h5 {
-  
-  }
 
   form input {
     width: 130px;
