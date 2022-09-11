@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import Card__Weather from './components/Card__Weather'
-import bg from './assets/weathercondition'
 
 
 function App() {
 
  const [coords, setCoords] = useState()
+ 
 
 
  useEffect(()=>{
@@ -23,7 +23,6 @@ function App() {
   navigator.geolocation.getCurrentPosition(success)
 
  },[])
-
 
   return (
     <div  className="App"> 

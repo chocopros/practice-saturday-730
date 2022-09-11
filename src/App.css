@@ -1,110 +1,161 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-#root{
-  --color-font--:rgb(246, 26, 173);
-  --color--bg--:rgb(22, 21, 21, 0.5);
+
+#root {
+  --color-font--: rgb(246, 26, 173);
+  --color--bg--: rgb(22, 21, 21, 0.5);
 }
 
-.load{
- height: 300px;
- width: 300px;
- border: 10px solid rgb(12, 3, 3, 0.5);
- border-radius: 50%;
- border-top: #000000;
- animation: load 2s linear infinite;
+.load {
+  height: 300px;
+  width: 300px;
+  border: 10px solid rgb(12, 3, 3, 0.5);
+  border-radius: 50%;
+  border-top: #000000;
+  animation: load 2s linear infinite;
 }
-@keyframes load{
+
+@keyframes load {
   from {
-  transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-  to{
-  transform: rotate(360deg);
+
+  to {
+    transform: rotate(360deg);
   }
 }
 
-.App{
-    width: 100%;
-    height: 100vh;
-    background-image: url('https://p4.wallpaperbetter.com/wallpaper/26/993/183/clouds-storm-dark-sky-wallpaper-preview.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
+
+.container-wheater {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://p4.wallpaperbetter.com/wallpaper/26/993/183/clouds-storm-dark-sky-wallpaper-preview.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.card{
-    width: 800px;
-    border: solid 1px black;
-    border-radius: 15px;
-    background-color: var(--color--bg--);    
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center; 
-    padding: 30px;
+/************ STATE SKY *****************/
+
+.few-clouds{
+  background-image: url('https://wallpaper.dog/large/17206596.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.broken-clouds{
+  background-image: url('https://images.freeimages.com/images/large-previews/e83/broken-clouds-1537880.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.clear-sky{
+  background-image: url('https://media.istockphoto.com/photos/beautiful-sky-with-white-cloud-background-picture-id517897328?b=1&k=20&m=517897328&s=170667a&w=0&h=QpeJ9U8Kdx7Wbj96k_8pYR_5NvM2FfcufYg2NJGqPUo=');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.overcast-clouds{
+  background-image: url('https://images.unsplash.com/photo-1525920980995-f8a382bf42c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8b3ZlcmNhc3QlMjBza3l8ZW58MHx8MHx8&w=1000&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.card__body{
-  width:600px;
+.scattered-clouds{
+  background-image: url('https://static.vecteezy.com/system/resources/previews/006/659/595/non_2x/blue-sky-and-white-cloud-use-for-background-the-sky-is-bright-blue-with-white-clouds-scattered-nature-images-with-sky-and-clouds-perfect-for-use-as-wallpaper-banner-or-background-free-photo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.light-rain{
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/324/560/46/bokeh-light-rainy-glass-wallpaper-preview.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/******************************/
+
+
+.card {
+  width: 800px;
+  border: solid 1px black;
+  border-radius: 15px;
+  background-color: var(--color--bg--);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.card__body {
+  width: 600px;
   height: 300px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 
-.body__img{
+.body__img {
   width: 40%;
   height: 300px;
 }
-.card__img{
+
+.card__img {
   width: auto;
   height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.card__img img{
+
+.card__img img {
   width: 300px;
 }
-.card__grados{
+
+.card__grados {
   height: 29.5%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 30px;
 }
-.card__info{
+
+.card__info {
   width: 60%;
   display: flex;
-  justify-content:center;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  gap: 15px; 
+  gap: 15px;
 }
-.card__info ul li{
+
+.card__info ul li {
   list-style: none;
   margin-bottom: 10px;
   font-size: 18px;
   color: white
 }
-.card__info span{
+
+.card__info span {
   font-weight: bold;
-  color:var(--color-font--);
+  color: var(--color-font--);
   font-size: 20px;
 }
 
-.card__btn{
-  border-radius:10px;
+.card__btn {
+  border-radius: 10px;
   padding: 7px 15px;
   background-color: var(--color-font--);
   color: white;
   font-size: 17px;
 }
-h2, h1{
+
+h2,
+h1 {
   color: white
 }
 
@@ -121,6 +172,7 @@ form {
 form input {
   padding: 5px 10px;
 }
+
 form h4 {
   color: white;
 }
@@ -131,35 +183,36 @@ form h4 {
 
 @media (max-width: 700px) {
 
-  .card{
+  .card {
     width: 300px;
     height: 500px;
-}
+  }
 
-  .card__body{
-    width:300px;
+  .card__body {
+    width: 300px;
     height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
-  
-  .body__img{
+
+  .body__img {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 300px;
     height: 100px;
   }
-  .card__img{
-    width: 300px; 
-  }
 
-  .card__img img{
+  .card__img {
     width: 300px;
   }
 
-  .card__grados{
+  .card__img img {
+    width: 300px;
+  }
+
+  .card__grados {
     height: 30px;
     display: flex;
     justify-content: center;
@@ -167,61 +220,63 @@ form h4 {
     font-size: 20px;
   }
 
-  .card__info{
+  .card__info {
     width: 300px;
     height: 200px;
     display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-   
+
   }
 
-  .card__img img{
+  .card__img img {
     width: 150px;
   }
 
-  .card__info span{
+  .card__info span {
     font-size: 20px;
   }
-  
-  .card__btn{
+
+  .card__btn {
     font-size: 17px;
   }
-  h1{
+
+  h1 {
     font-size: 20px;
   }
-  h2{
+
+  h2 {
     font-size: 18px;
   }
 
-  .card__info span{
+  .card__info span {
     font-size: 16px;
   }
 
-  .card__info ul li{
+  .card__info ul li {
     font-size: 14px;
   }
 
-  .card__grados{
+  .card__grados {
     margin-top: 20px;
-    
+
   }
 
-  .card__grados h2{
+  .card__grados h2 {
     font-size: 20px;
   }
 
-  .card__btn{
+  .card__btn {
     font-size: 16px;
   }
 
   form {
-    
+
     display: flex;
     gap: none;
     align-items: center;
-    
+
   }
 
 
@@ -229,5 +284,5 @@ form h4 {
     width: 130px;
   }
 
-  
+
 }
