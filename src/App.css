@@ -121,6 +121,9 @@ form {
 form input {
   padding: 5px 10px;
 }
+form h3 {
+  color: white;
+}
 
 /****** ESTADOS ***********/
 
