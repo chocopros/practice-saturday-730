@@ -5,27 +5,25 @@ import Card__Weather from './components/Card__Weather'
 
 function App() {
 
- const [coords, setCoords] = useState()
- 
+  const [coords, setCoords] = useState()
 
+  useEffect(() => {
 
- useEffect(()=>{
-
-  const success = pos =>{
-    //console.log(pos.coords.latitude)
-    //console.log(pos.coords.longitude)
-    const latlon={
-      lat: pos.coords.latitude,
-      lon: pos.coords.longitude
+    const success = pos => {
+      //console.log(pos.coords.latitude)
+      //console.log(pos.coords.longitude)
+      const latlon = {
+        lat: pos.coords.latitude,
+        lon: pos.coords.longitude
+      }
+      setCoords(latlon)
     }
-    setCoords(latlon)
-  }
-  navigator.geolocation.getCurrentPosition(success)
+    navigator.geolocation.getCurrentPosition(success)
 
- },[])
+  }, [])
 
   return (
-    <div  className="App"> 
+    <div className="App">
       <Card__Weather coords={coords} />
     </div>
   )

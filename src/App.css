@@ -176,6 +176,8 @@ form {
 
 form input {
   padding: 5px 10px;
+  text-align: center;
+  border-radius: 10px;
 }
 
 form h4 {

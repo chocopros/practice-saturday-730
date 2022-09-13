@@ -59,15 +59,19 @@ const Card__Weather = ({ coords}) => {
 
   const filterClick = e => {
     e.preventDefault()
-    console.log(e.target.cityName.value)
-    setFilter(e.target.cityName.value)
+    /*console.log(e.target.cityName.value)*/
+    setFilter(e.target.cityName.value.trim())
   }
 
   const bgImg = weather?.weather[0].description.replace(" ","-")
   console.log(bgImg)
 
   if (loading) {
-    return <Loader />
+    return (
+      <section className={`container-wheater ${bgImg} `}>
+        <Loader />
+      </section>
+    )
   } else {
     return (
       <section className={`container-wheater ${bgImg} `}>
